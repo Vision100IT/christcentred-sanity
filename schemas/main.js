@@ -33,6 +33,7 @@ export default {
               title: 'Child pages',
               name: 'childpages',
               type: 'array',
+              validation: Rule => Rule.required(),
               of: [
                 {
                   type: 'reference',
