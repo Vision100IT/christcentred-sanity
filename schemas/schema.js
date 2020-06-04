@@ -21,6 +21,7 @@ import themecolor from './themecolor';
 import sermons from './sermons';
 import series from './series';
 import gridblock from './gridblock';
+import blockContentNR from './blockContentNotRequired';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -48,6 +49,7 @@ export default createSchema({
     themecolor,
     sermons,
     series,
-    gridblock
+    gridblock,
+    blockContentNR
   ])
 });

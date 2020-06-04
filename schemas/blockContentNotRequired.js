@@ -11,9 +11,8 @@ import {MdLink} from 'react-icons/md';
  */
 export default {
   title: 'Block Content',
-  name: 'blockContent',
+  name: 'blockContentNR',
   type: 'array',
-  validation: Rule => Rule.required(),
   of: [
     {
       title: 'Block',

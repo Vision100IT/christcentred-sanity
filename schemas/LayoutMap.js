@@ -15,7 +15,7 @@ export default {
     {
       name: 'blurb',
       title: 'Blurb',
-      type: 'blockContent'
+      type: 'blockContentNR'
     },
     {
       name: 'details',
