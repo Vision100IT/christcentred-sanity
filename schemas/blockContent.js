@@ -100,6 +100,10 @@ export default {
       title: 'Content block',
       type: 'reference',
       to: [{type: 'gridblock'}, {type: 'form'}]
+    },
+    {
+      title: 'Google Calendar Embed',
+      type: 'googleCalendar'
     }
   ]
 };

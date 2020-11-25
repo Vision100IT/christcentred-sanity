@@ -22,6 +22,8 @@ import sermons from './sermons';
 import series from './series';
 import gridblock from './gridblock';
 import blockContentNR from './blockContentNotRequired';
+import formSubmission from './form-submission';
+import googleCalendar from './googleCalendar';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -50,6 +52,8 @@ export default createSchema({
     sermons,
     series,
     gridblock,
-    blockContentNR
+    blockContentNR,
+    formSubmission,
+    googleCalendar
   ])
 });

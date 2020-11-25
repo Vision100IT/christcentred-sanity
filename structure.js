@@ -98,6 +98,10 @@ export default () => {
             .title('Config')
             .schemaType('config')
             .documentId('global-config')
-        )
+        ),
+      S.listItem()
+        .title('Submissions')
+        .icon(MdInsertDriveFile)
+        .child(S.documentTypeList('submission').title('Submissions')),
     ]);
 };
