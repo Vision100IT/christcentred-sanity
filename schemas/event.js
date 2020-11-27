@@ -6,7 +6,8 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
+      validation: Rule => Rule.required()
     },
     {
       name: 'slug',
@@ -15,13 +16,8 @@ export default {
       options: {
         source: 'title',
         maxLength: 96
-      }
-    },
-    {
-      name: 'speaker',
-      title: 'Speaker',
-      type: 'reference',
-      to: { type: 'speaker' }
+      },
+      validation: Rule => Rule.required()
     },
     {
       name: 'body',
@@ -34,37 +30,28 @@ export default {
       type: 'image',
       options: {
         hotspot: true
-      }
+      },
+      validation: Rule => Rule.required()
     },
     {
       name: 'date',
       title: 'Date',
-      type: 'datetime'
+      type: 'datetime',
+      validation: Rule => Rule.required()
     },
     {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }]
-    },
-    {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime'
+      of: [{ type: 'reference', to: { type: 'category' } }],
+      validation: Rule => Rule.required()
     }
   ],
 
   preview: {
     select: {
       title: 'title',
-      speaker: 'speaker.name',
       media: 'mainImage'
-    },
-    prepare(selection) {
-      const { speaker } = selection
-      return Object.assign({}, selection, {
-        subtitle: speaker && `by ${speaker}`
-      })
     }
   }
 }

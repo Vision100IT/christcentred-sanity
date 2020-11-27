@@ -9,7 +9,8 @@ import {
   MdViewAgenda,
   MdCollectionsBookmark,
   MdInsertDriveFile,
-  MdInsertPhoto
+  MdInsertPhoto,
+  MdEvent
 } from 'react-icons/md';
 
 export default () => {
@@ -103,10 +104,12 @@ export default () => {
       S.divider(),
       S.listItem()
         .title('Events')
+        .icon(MdEvent)
         .child(
           S.documentTypeList('event')
             .title('Events')
             .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
+
         ),
       S.divider(),
       S.listItem()
