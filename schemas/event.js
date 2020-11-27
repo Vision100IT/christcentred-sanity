@@ -1,6 +1,6 @@
 export default {
-  name: 'post',
-  title: 'Blog Post',
+  name: 'event',
+  title: 'Event',
   type: 'document',
   fields: [
     {
@@ -35,6 +35,11 @@ export default {
       options: {
         hotspot: true
       }
+    },
+    {
+      name: 'date',
+      title: 'Date',
+      type: 'datetime'
     },
     {
       name: 'categories',

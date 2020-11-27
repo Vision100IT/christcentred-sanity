@@ -24,6 +24,11 @@ import gridblock from './gridblock';
 import blockContentNR from './blockContentNotRequired';
 import formSubmission from './form-submission';
 import googleCalendar from './googleCalendar';
+import event from './event';
+import category from './category';
+import GalleryHome from './GalleryHome';
+import author from './author';
+import imageSlider from './imageSlider';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -54,6 +59,11 @@ export default createSchema({
     gridblock,
     blockContentNR,
     formSubmission,
-    googleCalendar
+    googleCalendar,
+    event,
+    category,
+    GalleryHome,
+    author,
+    imageSlider
   ])
 });

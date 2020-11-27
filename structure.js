@@ -1,6 +1,6 @@
 import React from 'react';
 import S from '@sanity/desk-tool/structure-builder';
-import {FaCogs} from 'react-icons/fa';
+import { FaCogs } from 'react-icons/fa';
 import {
   MdMap,
   MdReceipt,
@@ -8,7 +8,8 @@ import {
   MdVideoLibrary,
   MdViewAgenda,
   MdCollectionsBookmark,
-  MdInsertDriveFile
+  MdInsertDriveFile,
+  MdInsertPhoto
 } from 'react-icons/md';
 
 export default () => {
@@ -37,6 +38,10 @@ export default () => {
                 .icon(MdReceipt)
                 .child(S.documentTypeList('LayoutHome').title('Segments')),
               S.listItem()
+                .title('Gallery segments')
+                .icon(MdReceipt)
+                .child(S.documentTypeList('GalleryHome').title('Segments')),
+              S.listItem()
                 .title('Map segments')
                 .icon(MdMap)
                 .child(S.documentTypeList('LayoutMap').title('Segments'))
@@ -53,6 +58,10 @@ export default () => {
           S.list()
             .title('Body content blocks')
             .items([
+              S.listItem()
+                .title('Image Sliders')
+                .child(S.documentTypeList('imageSlider').title('Image Sliders'))
+                .icon(MdInsertPhoto),
               S.listItem()
                 .title('Forms')
                 .child(S.documentTypeList('form').title('Forms')),
@@ -76,8 +85,11 @@ export default () => {
                 .child(
                   S.documentTypeList('series')
                     .title('Series')
-                    .defaultOrdering([{field: '_updatedAt', direction: 'desc'}])
-                )
+                    .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
+                ),
+              S.listItem()
+                .title('Categories')
+                .child(S.documentTypeList('category').title('Categories'))
             ])
         ),
       S.listItem()
@@ -86,7 +98,15 @@ export default () => {
         .child(
           S.documentTypeList('sermons')
             .title('Sermons')
-            .defaultOrdering([{field: '_updatedAt', direction: 'desc'}])
+            .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
+        ),
+      S.divider(),
+      S.listItem()
+        .title('Events')
+        .child(
+          S.documentTypeList('event')
+            .title('Events')
+            .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
         ),
       S.divider(),
       S.listItem()
